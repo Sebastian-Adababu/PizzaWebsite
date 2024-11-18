@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbar">
+    <a class="navbar-brand" href="#">Pizza Place</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#menu">Menu</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+    
+    <!-- Hero Section -->
+<div class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1 class="animated fadeInDown">Welcome to Pizza Place</h1>
+        <p class="animated fadeInUp">Your favorite pizza delivered hot and fresh!</p>
+        <a href="#menu" class="btn btn-primary btn-lg animated fadeInUp">View Menu</a>
+    </div>
+</div>
+<!-- Menu Section -->
+<div class="container my-5" id="menu">
+    <h2 class="text-center my-5">Our Menu</h2>
+    <div class="text-center mb-4">
+        <button class="btn btn-outline-primary" onclick="filterMenu('all')">All</button>
+        <button class="btn btn-outline-primary" onclick="filterMenu('vegetarian')">Vegetarian</button>
+        <button class="btn btn-outline-primary" onclick="filterMenu('meat')">Meat</button>
+        <button class="btn btn-outline-primary" onclick="filterMenu('specialty')">Specialty</button>
+    </div>
+    <div class="row">
+        <div class="col-md-4 menu-item vegetarian">
+            <div class="card mb-4 animated fadeInUp">
+                <img src="margherita(1).jpeg" class="card-img-top" alt="Margherita Pizza">
+                <div class="card-body">
+                    <h5 class="card-title">Margherita Pizza</h5>
+                    <p class="card-text">Classic pizza with fresh mozzarella, tomatoes, and basil.</p>
+                    <p class="price">$10.99</p>
+                    <a href="#" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 menu-item meat">
+            <div class="card mb-4 animated fadeInUp">
+                <img src="pepperoni(1).jpeg" class="card-img-top" alt="Pepperoni Pizza">
+                <div class="card-body">
+                    <h5 class="card-title">Pepperoni Pizza</h5>
+                    <p class="card-text">A favorite with pepperoni slices and mozzarella cheese.</p>
+                    <p class="price">$12.99</p>
+                    <a href="#" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 menu-item vegetarian">
+            <div class="card mb-4 animated fadeInUp">
+                <img src="veggie.jpeg" class="card-img-top" alt="Vegetarian Pizza">
+                <div class="card-body">
+                    <h5 class="card-title">Vegetarian Pizza</h5>
+                    <p class="card-text">Loaded with fresh vegetables and mozzarella cheese.</p>
+                    <p class="price">$11.99</p>
+                    <a href="#" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 menu-item meat">
+            <div class="card mb-4 animated fadeInUp">
+                <img src="meat-scaled.jpg" class="card-img-top" alt="Meat Lovers Pizza">
+                <div class="card-body">
+                    <h5 class="card-title">Meat Lovers Pizza</h5>
+                    <p class="card-text">A hearty pizza with pepperoni, sausage, and bacon.</p>
+                    <p class="price">$14.99</p>
+                    <a href="#" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 menu-item specialty">
+            <div class="card mb-4 animated fadeInUp">
+                <img src="bbq.jpeg" class="card-img-top" alt="BBQ Chicken Pizza">
+                <div class="card-body">
+                    <h5 class="card-title">BBQ Chicken Pizza</h5>
+                    <p class="card-text">Grilled chicken, BBQ sauce, and red onions on a cheesy base.</p>
+                    <p class="price">$13.99</p>
+                    <a href="#" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 menu-item specialty">
+            <div class="card mb-4 animated fadeInUp">
+                <img src="hawa.jpeg" class="card-img-top" alt="Hawaiian Pizza">
+                <div class="card-body">
+                    <h5 class="card-title">Hawaiian Pizza</h5>
+                    <p class="card-text">A unique blend of ham, pineapple, and cheese.</p>
+                    <p class="price">$12.99</p>
+                    <a href="#" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<section id="about" class="about-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">About Us</h2>
+        <p class="text-center mb-5">We are passionate about delivering the best pizza experience. Our ingredients are fresh, and our recipes are crafted with love.</p>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <div class="icon-container mb-3">
+                    <i class="fas fa-pizza-slice fa-3x"></i>
+                </div>
+                <h4>Quality Ingredients</h4>
+                <p>We use only the freshest ingredients to make our delicious pizzas.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="icon-container mb-3">
+                    <i class="fas fa-users fa-3x"></i>
+                </div>
+                <h4>Family Friendly</h4>
+                <p>Our restaurant is a great place for families to enjoy a meal together.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="icon-container mb-3">
+                    <i class="fas fa-clock fa-3x"></i>
+                </div>
+                <h4>Fast Service</h4>
+                <p>We pride ourselves on providing quick and friendly service.</p>
+            </div>
+        </div>
+    </div>
+</section> 
+
+<section id="contact" class="contact-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <p class="text-center mb-5">We'd love to hear from you! Fill out the form below or reach us at our address.</p>
+        <div class="row">
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h4>Our Address</h4>
+                <p>123 Pizza Street<br>Pizza City, PC 12345</p>
+                <h4>Phone</h4>
+                <p>(123) 456-7890</p>
+                <h4>Email</h4>
+                <p>info@pizzaplace.com</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-section py-4">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <p>123 Pizza Street<br>Pizza City, PC 12345</p>
+                <p>Email: info@pizzaplace.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Follow Us</h5>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-yelp"></i></a>
+            </div>
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <a href="#about">About Us</a><br>
+                <a href="#menu">Our Menu</a><br>
+                <a href="#contact">Contact Us</a><br>
+            </div>
+        </div>
+        <hr class="my-4">
+        <p>&copy; 2023 Pizza Place. All rights reserved.</p>
+    </div>
+</footer>
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function(){
+    const form = document.querySelector('form');
+    
+    form.addEventListener('submit', function(event) {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        if (!name || !email || !message) {
+            alert("Please fill out all fields.");
+            event.preventDefault(); // Prevent form submission
+        } else {
+            alert("Thank you for your message!");
+        }
+        });
+    });
+
+
+    </script>
+<script src="scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

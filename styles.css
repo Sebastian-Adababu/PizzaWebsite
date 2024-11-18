@@ -1,0 +1,323 @@
+/* Navbar Styles */
+#navbar {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.9); /* Light background on scroll */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.navbar-nav .nav-link {
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Optional: Active link style */
+.nav-item.active .nav-link {
+    font-weight: bold; /* Make active link bold */
+    color: #007bff; /* Active link color */
+}
+/* Navbar Styles */
+.navbar-nav .nav-link {
+    position: relative; /* Position relative for pseudo-element */
+    padding: 10px 15px; /* Padding for better spacing */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #dc3545; /* Change text color on hover */
+}
+
+.navbar-nav .nav-link::after {
+    content: ''; /* Empty content for pseudo-element */
+    display: block; /* Make it a block element */
+    height: 2px; /* Height of the underline */
+    background: #dc3545; /* Color of the underline */
+    transition: width 0.3s ease, left 0.3s ease; /* Smooth transition for underline */
+    width: 0; /* Start with no width */
+    left: 50%; /* Center the underline */
+    position: absolute; /* Position absolutely */
+    bottom: 0; /* Align to the bottom of the link */
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%; /* Full width on hover */
+    left: 0; /* Align to the left */
+}
+.hero {
+    background-image: url(back.jpg); /* Replace with your image URL */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    height: 60vh; /* Set height to 60% of the viewport height */
+    color: white; /* Text color */
+    position: relative; /* For overlay */
+    display: flex; /* Flexbox for centering content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    text-align: center; /* Center text */
+    overflow: hidden; /* Hide overflow */
+}
+
+.overlay {
+    position: absolute; /* Position overlay */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text contrast */
+    z-index: 1; /* Ensure overlay is above background */
+}
+
+.hero-content {
+    position: relative; /* Ensure content is above overlay */
+    z-index: 2; /* Higher z-index to be above overlay */
+}
+/* H1 Styles */
+.hero h1 {
+    opacity: 0; /* Start with hidden text */
+    transform: translateY(-20px); /* Start slightly above */
+    animation: fadeInUp 1s forwards; /* Animation to fade in */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover Effect */
+.hero h1:hover {
+    color: #dc3545; /* Change color on hover */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Add shadow for depth */
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Move to original position */
+    }
+}
+.animated {
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.fadeInDown {
+    animation-name: fadeInDown;
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Menu Section Styles */
+#menu {
+    background-color: #f8f9fa; /* Light background for contrast */
+    padding: 50px 0; /* Top and bottom padding */
+}
+
+.card {
+    border: none; /* Remove default card border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+.card-img-top {
+    height: 200px; /* Set a fixed height for images */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+}
+
+.price {
+    font-size: 1.5rem; /* Larger font size for price */
+    font-weight: bold; /* Bold price */
+    color: #28a745; /* Green color for price */
+}
+
+.btn-primary {
+    background-color: #dc3545; /* Bootstrap danger color for button */
+    border-color: #dc3545; /* Match border color */
+}
+
+.btn-primary:hover {
+    background-color: #c82333; /* Darker shade on hover */
+    border-color: #bd2130; /* Darker border on hover */
+}
+
+.text-center {
+    margin-bottom: 30px; /* Spacing below the title */
+}
+
+.menu-item {
+    display: block; /* Ensure all items are displayed by default */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 150px; /* Adjust image height for smaller screens */
+    }
+}
+.menu-section {
+    background-color: #ffffff; /* White background for contrast */
+}
+
+.menu-item {
+    margin-bottom: 30px; /* Space between menu items */
+}
+
+.menu-card {
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 20px; /* Inner padding */
+    text-align: center; /* Center text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    position: relative; /* For pseudo-element */
+    overflow: hidden; /* Hide overflow */
+}
+
+.menu-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.menu-card h4 {
+    margin-bottom: 10px; /* Space below the title */
+}
+
+.menu-card p {
+    margin-bottom: 15px; /* Space below the description */
+}
+
+.price {
+    font-weight: bold; /* Bold price */
+    color: #dc3545; /* Price color */
+}
+
+/* Animation for menu items */
+.menu-item {
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly below */
+    animation: fadeInUp 0.5s forwards; /* Animation to fade in */
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Move to original position */
+    }
+}
+
+.menu-item:nth-child(1) {
+    animation-delay: 0.1s; /* Delay for the first item */
+}
+
+.menu-item:nth-child(2) {
+    animation-delay: 0.2s; /* Delay for the second item */
+}
+
+.menu-item:nth-child(3) {
+    animation-delay: 0.3s; /* Delay for the third item */
+}
+
+.about-section {
+    background-color: #f8f9fa; /* Light background for contrast */
+}
+
+.icon-container {
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.icon-container:hover {
+    transform: scale(1.2); /* Scale up on hover */
+    color: #dc3545; /* Change color on hover */
+}
+
+.about-section h2 {
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.about-section p {
+    margin-bottom: 30px; /* Space below the paragraph */
+}
+.contact-section {
+    background-color: #f8f9fa; /* Light background for contrast */
+}
+
+.contact-section h2 {
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.contact-section p {
+    margin-bottom: 30px; /* Space below the paragraph */
+}
+
+.contact-section .form-control {
+    border-radius: 5px; /* Rounded corners for inputs */
+}
+
+.contact-section .btn-primary {
+    border-radius: 5px; /* Rounded corners for button */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.contact-section .btn-primary:hover {
+    background-color: #dc3545; /* Change background color on hover */
+}
+
+.footer-section {
+    background-color: #343a40; /* Dark background */
+    color: white; /* White text */
+}
+
+.footer-section h5 {
+    margin-bottom: 15px; /* Space below headings */
+}
+
+.footer-section p {
+    margin-bottom: 10px; /* Space below paragraphs */
+}
+
+.footer-section a {
+    color: white; /* White links */
+    text-decoration: none; /* No underline */
+}
+
+.footer-section a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.social-icon {
+    margin: 0 10px; /* Space between icons */
+    color: white; /* White icons */
+    font-size: 24px; /* Icon size */
+}
+
+.social-icon:hover {
+    color: #dc3545; /* Change color on hover */
+}
